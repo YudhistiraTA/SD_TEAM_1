@@ -13,7 +13,7 @@ typedef struct {
     DocumentType document_type;
   };
   char name[50];
-  char asignee[50];
+  char assignee[50];
 } Asset;
 typedef struct {
   Asset* assets;
@@ -72,7 +72,7 @@ int display_asset_list(const AssetList* list) {
     }
     printf("Asset %zu: Type: %s, %s: %s, Name: %s, Assignee: %s\n", i + 1,
            asset_type_str, specific_type_label, specific_type_str, asset->name,
-           asset->asignee);
+           asset->assignee);
   }
   return 0;
 }
