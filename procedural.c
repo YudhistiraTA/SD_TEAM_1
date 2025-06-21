@@ -48,13 +48,13 @@ int display_asset_list(const AssetList* list) {
     const Asset* asset = &list->assets[i];
     const char* asset_type_str =
         (asset->asset_type == ITEM) ? "Item" : "Document";
-    const char* specific_type_label = "Type";
+    const char* specific_type_label = "Item";
     const char* specific_type_str;
 
     if (asset->asset_type == ITEM) {
       specific_type_str = (asset->item_type == LAPTOP) ? "Laptop" : "ID Card";
     } else {
-      specific_type_str = "Division";
+      specific_type_label = "Division";
       switch (asset->document_type) {
         case FINANCE:
           specific_type_str = "Finance";
